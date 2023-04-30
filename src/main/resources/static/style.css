@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#serverList {
+    display: flex;
+    flex-direction: column;
+}
+
+.serverRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.serverCell {
+    flex: 1;
+    padding: 5px;
+}
+
+.editButton,
+.deleteButton {
+    padding: 5px;
+    margin-right: 10px;
+}

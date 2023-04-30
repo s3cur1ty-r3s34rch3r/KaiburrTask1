@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Servers</title>
+</head>
+<body>
+<h1>Servers</h1>
+
+<form th:action="@{/servers}" method="post">
+    <label>Name:</label>
+    <input type="text" name="name" required><br>
+    <label>Language:</label>
+    <input type="text" name="language" required><br>
+    <label>Framework:</label>
+    <input type="text" name="framework" required><br>
+    <button type="submit">Add Server</button>
+</form>
+
+<hr>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Framework</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="server : ${servers}">
+        <td th:text="${server.id}"></td>
+        <td th:text="${server.name}"></td>
+        <td th:text="${server.language}"></td>
+        <td th:text="${server.framework}"></td>
+        <td>
+            <form th:action="@{/servers/{id}(id=${server.id})}" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

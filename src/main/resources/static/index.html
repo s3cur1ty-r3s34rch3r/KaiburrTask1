@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Server List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>My Server List</h1>
+
+<form id="serverForm">
+    <input type="hidden" id="id" name="id">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="language">Language:</label>
+    <input type="text" id="language" name="language"><br><br>
+    <label for="framework">Framework:</label>
+    <input type="text" id="framework" name="framework"><br><br>
+    <button type="submit" id="saveButton">Save</button>
+    <button type="button" id="cancelButton">Cancel</button>
+</form>
+
+<form id="searchForm">
+    <label for="searchInput">Search:</label>
+    <input type="text" id="searchInput" name="searchInput">
+    <button type="submit">Search</button>
+</form>
+
+<div id="serverList"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
