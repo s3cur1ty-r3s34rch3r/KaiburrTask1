@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Server List</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Management UI</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>My Server List</h1>
+<h1>Server Management</h1>
 
-<form id="serverForm">
-    <input type="hidden" id="id" name="id">
+<!-- Form for adding/editing a server -->
+<form id="server-form">
+    <h2 id="form-title">Add Server</h2>
+    <input type="hidden" id="server-id">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id"><br><br>
     <label for="language">Language:</label>
     <input type="text" id="language" name="language"><br><br>
     <label for="framework">Framework:</label>
     <input type="text" id="framework" name="framework"><br><br>
-    <button type="submit" id="saveButton">Save</button>
-    <button type="button" id="cancelButton">Cancel</button>
+    <button type="submit">Save</button>
+    <button type="button" id="cancel-button">Cancel</button>
 </form>
 
-<form id="searchForm">
-    <label for="searchInput">Search:</label>
-    <input type="text" id="searchInput" name="searchInput">
-    <button type="submit">Search</button>
-</form>
+<!-- Table to display servers -->
+<table id="servers-table">
+    <h2>All Servers</h2>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>ID</th>
+        <th>Language</th>
+        <th>Framework</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
 
-<div id="serverList"></div>
+<button id="add-server-button">Add Server</button>
 
-<script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
