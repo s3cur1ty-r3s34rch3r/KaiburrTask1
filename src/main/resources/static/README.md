@@ -29,13 +29,19 @@ We can see that the server is added.
 
 
 Explanation of the main UI functioning files:
+
 Server.js
+<div></div>
 The purpose of this code is to provide a Node.js server that allows for managing a collection of servers in a MongoDB database through a RESTful API.
 The server is built using the Express.js framework and the Mongoose library is used to connect to the MongoDB database, define the server schema, and create the server model.
 The API has five routes that allow for retrieving all servers, retrieving a single server by ID, adding a new server, updating an existing server, and deleting a server. These routes use the corresponding methods provided by the Mongoose library to interact with the MongoDB database.
 The server also serves a static HTML file located in the "public" directory.
 When the server starts, it listens on a specified port, which can be set through the PORT environment variable. If the PORT environment variable is not set, the server listens on port 3000.
+<div></div>
+
 App.js
+<div></div>
+
 This is a JavaScript code that provides functionality for managing a collection of servers through a web interface.
 
 The code includes event listeners for various buttons and forms on the page, including the form for adding/editing a server, the cancel button, the edit button, the delete button, and the add server button.
